@@ -16,3 +16,9 @@ output "private_ip" {
 
   value = aws_instance.web_server.private_ip
 }
+
+output "aws_security_group" {
+  description = "ID of the web server security group"
+
+  value = aws_security_group.web_sg.id
+}

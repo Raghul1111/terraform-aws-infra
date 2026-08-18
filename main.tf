@@ -22,4 +22,5 @@ resource "aws_instance" "web_server" {
   tags = {
     Name = "Terraform-EC2"
   }
+  vpc_security_group_ids = [aws_security_group.web_sg.id]
 }
