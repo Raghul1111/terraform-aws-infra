@@ -22,3 +22,16 @@ output "aws_security_group" {
 
   value = aws_security_group.web_sg.id
 }
+
+output "aws_route_table" {
+  description = "ID of the route table"
+
+  value = aws_route_table.public.id
+
+}
+
+output "aws_route_table_association" {
+  description = "ID of the AWS route table Association"
+
+  value = aws_route_table.public.id
+}
