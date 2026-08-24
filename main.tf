@@ -1,3 +1,14 @@
+# Terraform Remote Backend
+# Stores the Terraform state file securely in an Amazon S3 bucket.
+# The Terraform code remains in Git; only the Terraform state is stored in S3.
+# This allows team members to work with a shared remote state.
+terraform {
+  backend "s3" {
+    bucket = "raghul-devops-terraform-state-2026" //Which S3 bucket stores the state
+    key    = "terraform.tfstate"                  //Where the state is stored inside the bucket
+    region = "ap-south-1"
+  }
+}
 
 data "aws_ami" "amazon_linux" {
   most_recent = true
