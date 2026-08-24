@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "ap-south-1"
+  region = "aws_region"
 }
 resource "aws_s3_bucket" "terraform_state" {
   bucket = "raghul-devops-terraform-state-2026"
