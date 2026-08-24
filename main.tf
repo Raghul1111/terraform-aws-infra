@@ -6,7 +6,7 @@ terraform {
   backend "s3" {
     bucket = "raghul-devops-terraform-state-2026" //Which S3 bucket stores the state
     key    = "terraform.tfstate"                  //Where the state is stored inside the bucket
-    region = "ap-south-1"
+    region = "aws_region"
   }
 }
 
